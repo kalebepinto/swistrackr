@@ -12,12 +12,9 @@
 #' @return A table containing the x and y axis values for each zone of interest.
 #' @examples zones('image.jpg = bg.image', nzones = 2, pzones = 4)
 #'
+#'@import sp
+#'
 #' @export
-
-if(!require(sp)){
-  install.packages('sp')
-  library(sp)
-}
 
 zones <- function(image.jpg = NA, nzones = 1, pzones = 4){
   n <- 1:nzones

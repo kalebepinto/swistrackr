@@ -5,7 +5,7 @@ Authors@R:
     person("Kalebe", "Pinto", , "kalebedsp@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: Package that calculates the time an object remains in a zone of interest.
-Imports: jpeg
+Imports: jpeg, sp
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
