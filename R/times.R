@@ -16,16 +16,9 @@
 #' remained in each of the zones of interest.
 #' @examples times(output.swtr, zones.swtr, video.swtr)
 #'
+#' @import jpeg sp
+#'
 #' @export
-
-if(!require(sp)){
-  install.packages('sp')
-  library(sp)
-}
-if(!require(jpeg)){
-  install.packages('jpeg')
-  library(jpeg)
-}
 
 times <- function(output.swtr = NA, zones.swtr = NA, video.swtr = NA){
   n <- 1:length(levels(as.factor(zones.swtr$Zones))) #Varia de acordo com numero de zonas
