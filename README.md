@@ -33,7 +33,6 @@ e sua configuração no sistema.
 
 O pacote R swistrackr se encontra depositado no Github. Para instalação utilize:
 
-
 ```{package install, message=FALSE}
 if(!require(devtools)){
   install.packages('devtools')
@@ -43,35 +42,27 @@ devtools::install_github("kalebepinto/swistrackr", build_vignettes = TRUE)
 
 ## Utilização do pacote
 
-Depois de instalado, carregue a biblioteca e execute os exemplos:
+### Obter informacoes de dimensao do arquivo background.jpg
+```{r setup background}
+bg.image <- swistrackr::background(image.jpg = system.file('extdata', 'bg-swistrack-1.jpg', package = 'swistrackr'))
+bg.image
+```
 
-```{examples, message=FALSE}
-library(swistrackr)
+### Obter informacoes de duracao e framerate do video
+```{r setup track_video}
+#video.swtr <- swistrackr::track_video(video.avi = system.file('extdata', 'video-swistrack-1.avi', package = 'swistrackr'))
+#video.swtr
+```
 
-# Extrair frames do video para criacao do arquivo background.jpg
-salami('data/example_2/swistrack_video_2.avi',
-       c('00:00:05', '00:00:10'), 'bg.jpg', 3)
+### Definir zonas de interesse no video
+```{r setup zones}
+#zones.swtr <- zones('image.jpg = bg.image', nzones = 2, pzones = 4)
+#zones.swtr
+```
 
-# Obter informacoes de dimensao do arquivo background.jpg
-background(img = 'data/example_2/swistrack_background_2.jpg')
-
-# Obter informcoes de duracao e framerate do video
-video <- track_video('data/example_2/swistrack_video_2.avi')
-
-# Obter informacoes dos dados de coordenadas, background e video
-swis_set(swis.out = 'data/example_2/swistrack_output_2.txt',
-         swis.video = 'data/example_2/swistrack_video_2.avi',
-         swis.bg = 'data/example_2/swistrack_background_2.jpg')
-
-# Permite ao usuario determinar as zonas de interesse no video
-output.zones <- zones(img = 'data/example_2/swistrack_background_2.jpg',
-                      nzones = 1, pzones = 4)
-
-# Retorna ao usuario o tempo em que o objeto permaneceu nas zonas de interesse
-times('data/example_2/swistrack_output_2.txt', output.zones, video)
-
-# Retorna ao usuario a ordem em que as zonas de interesse foram visitadas
-visits('data/example_2/swistrack_output_2.txt', output.zones)
+### Calcular o tempo em que o objeto permaneceu nas zonas de interesse
+```{r setup times}
+#times(output.swtr, zones.swtr, video.swtr)
 ```
 
 ## Licença
