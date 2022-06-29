@@ -22,6 +22,7 @@ track_video <- function(video.avi = NA){
   if (grepl('\\.avi$', video.avi) == FALSE){
     stop('Not a AVI file.', call. = F)
   }
+  video.avi <- gsub('.+/', '',video.avi)
   wa <- getOption('warn') # Desabilitar temporariamente os warnings
   options(warn = -1)
   outff <- system(paste0('ffmpeg -i ' , video.avi, ' 2>&1'), intern = T)
