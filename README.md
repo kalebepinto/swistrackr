@@ -37,7 +37,6 @@ O pacote R swistrackr se encontra depositado no Github. Para instalação utiliz
 ```{package install, message=FALSE}
 if(!require(devtools)){
   install.packages('devtools')
-  library(devtools)
 }
 devtools::install_github("kalebepinto/swistrackr", build_vignettes = TRUE)
 ```
