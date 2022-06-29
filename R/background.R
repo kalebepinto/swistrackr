@@ -5,9 +5,9 @@
 #' that #' does not contain the tracked particle. Later, this file will
 #' be used to define the zones of interest to be analyzed.
 #'
-#' @param image.jpg Image in .jpg extension created in an image editor
+#' @param image.jpg Image in .jpg extension created in an image editor.
 #'
-#' @return Height and Width dimensions from background video
+#' @return Height and Width dimensions from background video.
 #' @examples background(image.jpg = 'bg-swistrack-1.jpg')
 #'
 #' @export
