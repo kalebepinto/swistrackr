@@ -5,7 +5,9 @@ Authors@R:
     person("Kalebe", "Pinto", , "kalebedsp@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: Package that calculates the time an object remains in a zone of interest.
-Imports: jpeg, sp
+Imports:
+    jpeg,
+    sp
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -15,3 +17,6 @@ BugReports: https://github.com/kalebepinto/swistrackr/issues
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Depends: 
+    R (>= 2.10)
+LazyData: true

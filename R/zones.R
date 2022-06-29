@@ -12,7 +12,7 @@
 #' @return A table containing the x and y axis values for each zone of interest.
 #' @examples zones('image.jpg = bg.image', nzones = 2, pzones = 4)
 #'
-#'@import sp
+#' @import jpeg sp
 #'
 #' @export
 
